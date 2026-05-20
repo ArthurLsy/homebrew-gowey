@@ -8,4 +8,7 @@ cask "raven" do
   homepage "https://github.com/ArthurLsy/raven"
 
   app "Raven.app"
+  postflight do
+    system_command "xattr", args: ["-rd", "com.apple.quarantine", "#{appdir}/Raven.app"], sudo: false
+  end
 end
