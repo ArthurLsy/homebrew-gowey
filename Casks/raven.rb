@@ -8,5 +8,12 @@
     homepage "https://github.com/arthurlsy/raven"
 
     app "Raven.app"
+    
+    postflight do
+      system_command "/usr/bin/xattr",
+        args: ["-cr", "#{appdir}/Raven.app"],
+        sudo: false
+    end
+  end
   end
 
