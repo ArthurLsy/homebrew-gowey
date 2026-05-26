@@ -15,5 +15,4 @@
         sudo: false
     end
   end
-  end
 
